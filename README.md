@@ -1,0 +1,93 @@
+![messageWay](logo.png)
+# MessageWay NodeJS SDK
+
+A NodeJS SDK for the MessageWay API.
+
+## Documents
+[Full documentation is here.](https://messageway.github.io/MessageWayNodeJS.git)
+
+## Install
+```bash
+npm install messageway
+```
+
+## Send OTP Code Via **WhatsApp Messenger**
+```js
+const { MessageWay } = require('messageway')
+const otp = new MessageWay(API_KEY)
+
+otp.sendWhatsAppMessage({
+  mobile: '09333333333',
+  templateID: 12,
+  params: ['Foo'],
+  length: 4,
+})
+.then(referenceID => {
+  console.log(referenceID)
+})
+.catch(error => {
+  console.error(error)
+})
+```
+
+## Send OTP Code Via **SMS**
+```js
+const { MessageWay } = require('messageway')
+const otp = new MessageWay(API_KEY)
+
+otp.sendSMS({
+  mobile: '09333333333',
+  templateID: 12,
+  params: ['Foo'],
+  length: 4,
+})
+.then(referenceID => {
+  console.log(referenceID)
+})
+.catch(error => {
+  console.error(error)
+})
+```
+
+## Verify OTP Code
+```js
+const { MessageWay, isMessageWayError } = require('messageway')
+const otp = new MessageWay(API_KEY)
+
+otp.verify({
+  mobile: '09333333333',
+  otp: '3305',
+})
+.then(() => {
+  console.log('Code is correct!')
+})
+.catch(error => {
+  // handle Error
+  if (isMessageWayError(error)) {
+    console.log(`Error ${error.code}: ${error.message}`)
+  } else {
+    // unknown error
+    console.error(error)
+  }
+})
+```
+
+## Use async functions
+```js
+async function send() {
+  try {
+    const result = await otp.getStatus({ OTPReferenceID: 1628960593121007556n })
+    console.log('Method: ' + result.OTPMethod)
+    console.log('Status: ' + result.OTPStatus)
+    console.log('Verified: ' + result.OTPVerified)
+  } catch (error) {
+    if (isMessageWayError(error)) {
+      console.log(`Error ${error.code}: ${error.message}`)
+    } else {
+      console.error(error)
+    }
+  }
+}
+
+send()
+```
