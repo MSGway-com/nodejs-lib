@@ -1,5 +1,5 @@
 {
-  "name": "messageway",
+  "name": "@messageway/messageway",
   "version": "1.0.0",
   "description": "MessageWay nodeJS library",
   "main": "dist/index.js",
@@ -23,13 +23,8 @@
     "ivr"
   ],
   "contributors": [
-    {
-      "name": "Mojtaba Ghasemzadeh Tehrany"
-    },
-    {
-      "name": "Ehsan Sabet",
-      "email": "ehsan.sabet@hotmail.com"
-    }
+    "Mojtaba Ghasemzadeh Tehrany",
+    "Ehsan Sabet <ehsan.sabet@hotmail.com>"
   ],
   "license": "MIT",
   "bugs": {
