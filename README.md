@@ -4,7 +4,7 @@
 A NodeJS SDK for the MessageWay API.
 
 ## Documents
-[Full documentation is here.](https://messageway.github.io/MessageWayNodeJS.git)
+[Full documentation is here.](https://messageway.github.io/MessageWayNodeJS)
 
 ## Install
 ```bash
