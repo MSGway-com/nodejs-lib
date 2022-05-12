@@ -8,7 +8,7 @@ A NodeJS SDK for the MessageWay API.
 
 ## Install
 ```bash
-npm install messageway
+npm i @messageway/messageway
 ```
 
 ## Send OTP Code Via **WhatsApp Messenger**
