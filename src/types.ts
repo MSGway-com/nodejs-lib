@@ -33,7 +33,7 @@ export interface SendInputCommon {
   templateID?: number
   countryCode?: number
   mobile: string
-  params: string[]
+  params?: string[]
   expireTime?: Date
 }
 
@@ -55,7 +55,7 @@ export type SendInput<IsManual extends boolean> = IsManual extends true ? SendMa
   length: number
   method: OTPMethod
   mobile: string
-  params: string[]
+  params?: string[]
   provider?: number
   templateID?: number
 }
