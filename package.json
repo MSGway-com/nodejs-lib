@@ -32,6 +32,7 @@
   },
   "homepage": "https://globalsmartotp.github.io/MessageWayNodeJS",
   "devDependencies": {
+    "@types/got": "^9.6.12",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.11",
     "dotenv": "^10.0.0",
