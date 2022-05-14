@@ -11,12 +11,12 @@ A NodeJS SDK for the MessageWay API.
 npm i @messageway/messageway
 ```
 
-## Send OTP Code Via **WhatsApp Messenger**
+## Send Message Via **WhatsApp Messenger**
 ```js
 const { MessageWay } = require('messageway')
-const otp = new MessageWay(API_KEY)
+const message = new MessageWay(API_KEY)
 
-otp.sendWhatsAppMessage({
+message.sendWhatsAppMessage({
   mobile: '09333333333',
   templateID: 12,
   params: ['Foo'],
@@ -30,12 +30,12 @@ otp.sendWhatsAppMessage({
 })
 ```
 
-## Send OTP Code Via **SMS**
+## Send Message Via **SMS**
 ```js
 const { MessageWay } = require('messageway')
-const otp = new MessageWay(API_KEY)
+const message = new MessageWay(API_KEY)
 
-otp.sendSMS({
+message.sendSMS({
   mobile: '09333333333',
   templateID: 12,
   params: ['Foo'],

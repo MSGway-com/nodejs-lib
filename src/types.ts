@@ -3,19 +3,19 @@ interface RequestOptions {
   language?: string
 }
 
-/** OTP Sending type */
-export type OTPMethod = 'sms' | 'ivr' | 'messenger'
+/** Message Sending type */
+export type MessageMethod = 'sms' | 'ivr' | 'messenger'
 
 /**
- * OTP Status types
- * 'pending': OTP not yet sent
- * 'operatorDelivered': OTP sent to operator and waiting for delivery
- * 'sent': User received OTP
- * 'seen': OTP is seen by user (in messenger mode)
- * 'notDelivered': OTP not delivered by operator
- * 'failed': OTP failed to be delivered to operator
+ * Message Status types
+ * 'pending': Message not yet sent
+ * 'operatorDelivered': Message sent to operator and waiting for delivery
+ * 'sent': User received Message
+ * 'seen': Message is seen by user (in messenger mode)
+ * 'notDelivered': Message not delivered by operator
+ * 'failed': Message failed to be delivered to operator
  */
-export type OTPStatus = 'pending' | 'sent' | 'seen' | 'operatorDelivered' | 'notDelivered' | 'failed'
+export type MessageStatus = 'pending' | 'sent' | 'seen' | 'operatorDelivered' | 'notDelivered' | 'failed'
 
 export enum MessengerProvider {
   /** from WhatsApp Messenger */
@@ -24,7 +24,7 @@ export enum MessengerProvider {
   Gap = 2
 }
 
-export interface OTPError {
+export interface MessageError {
   code: number
   message: string
 }
@@ -53,7 +53,7 @@ export type SendInput<IsManual extends boolean> = IsManual extends true ? SendMa
   countryCode?: number
   expireTime?: number
   length: number
-  method: OTPMethod
+  method: MessageMethod
   mobile: string
   params?: string[]
   provider?: number
@@ -79,10 +79,10 @@ export interface StatusRequest {
 }
 
 export interface StatusResponse {
-  /** OTP Send method (sms, ivr, ...) */
-  OTPMethod: OTPMethod
-  /** OTP status text (pending, sent, ...) */
-  OTPStatus: OTPStatus
+  /** Message Send method (sms, ivr, ...) */
+  MessageMethod: MessageMethod
+  /** Message status text (pending, sent, ...) */
+  MessageStatus: MessageStatus
   /** Is OTP verified */
   OTPVerified: boolean
 }
