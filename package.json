@@ -1,6 +1,6 @@
 {
   "name": "@messageway/messageway",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MessageWay nodeJS library",
   "main": "dist/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/MessageWay/MessageWayNodeJS/issues"
   },
-  "homepage": "https://globalsmartotp.github.io/MessageWayNodeJS",
+  "homepage": "https://messageway.github.io/MessageWayNodeJS/",
   "devDependencies": {
     "@types/got": "^9.6.12",
     "@types/jest": "^26.0.24",
