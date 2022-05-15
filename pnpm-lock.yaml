@@ -1,6 +1,7 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
+  '@types/got': ^9.6.12
   '@types/jest': ^26.0.24
   '@types/node': ^16.4.11
   dotenv: ^10.0.0
@@ -13,6 +14,7 @@ dependencies:
   got: 11.8.2
 
 devDependencies:
+  '@types/got': 9.6.12
   '@types/jest': 26.0.24
   '@types/node': 16.4.11
   dotenv: 10.0.0
@@ -204,6 +206,8 @@ packages:
     resolution: {integrity: sha512-0v7oNOjr6YT9Z2RAOTv4T9aP+ubfx4Q/OhVtAet7PFDt0t9Oy6Jn+/rfC6b8HJ5zEqrQCiMxJfgtHpmIminmJQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.15.0
     dev: true
 
   /@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.15.0:
@@ -648,6 +652,14 @@ packages:
       '@types/responselike': 1.0.0
     dev: false
 
+  /@types/got/9.6.12:
+    resolution: {integrity: sha512-X4pj/HGHbXVLqTpKjA2ahI4rV/nNBc9mGO2I/0CgAra+F2dKgMXnENv2SRpemScBzBAI4vMelIVYViQxlSE6xA==}
+    dependencies:
+      '@types/node': 16.4.11
+      '@types/tough-cookie': 4.0.2
+      form-data: 2.5.1
+    dev: true
+
   /@types/graceful-fs/4.1.5:
     resolution: {integrity: sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==}
     dependencies:
@@ -702,6 +714,10 @@ packages:
 
   /@types/stack-utils/2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
+    dev: true
+
+  /@types/tough-cookie/4.0.2:
+    resolution: {integrity: sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==}
     dev: true
 
   /@types/yargs-parser/20.2.1:
@@ -1285,6 +1301,15 @@ packages:
       path-exists: 4.0.0
     dev: true
 
+  /form-data/2.5.1:
+    resolution: {integrity: sha512-m21N3WOmEEURgk6B9GLOE4RuWOFf28Lhh9qGYeNlGq4VDXUlJy2th2slBNU8Gp8EzloYZOibZJ7t5ecIrFSjVA==}
+    engines: {node: '>= 0.12'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.32
+    dev: true
+
   /form-data/3.0.1:
     resolution: {integrity: sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==}
     engines: {node: '>= 6'}
@@ -1302,6 +1327,7 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -2777,6 +2803,7 @@ packages:
     resolution: {integrity: sha512-JhS3hmcVaXlp/xSo3PKY5R0JqKs5M3IV+exdLHW99qKvKivPO4Z8qbej6mte17SOPqAOVMjt/XGgWacnFSzM3g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
+    requiresBuild: true
     dev: true
     optional: true
 

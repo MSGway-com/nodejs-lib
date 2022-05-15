@@ -1,7 +1,7 @@
 import got from 'got'
-import { SendInput, SendManuallyInput, SendAutomaticInput, VerifyRequest, StatusRequest, StatusResponse, OTPError, SendRequest, SendResponse, MessengerProvider } from './types'
-export { SendInput, SendManuallyInput as SendManuallyInput, SendAutomaticInput, VerifyRequest, StatusRequest, StatusResponse, OTPError }
-export { OTPMethod, OTPStatus } from './types'
+import { SendInput, SendManuallyInput, SendAutomaticInput, VerifyRequest, StatusRequest, StatusResponse, MessageError, SendRequest, SendResponse, MessengerProvider } from './types'
+export { SendInput, SendManuallyInput as SendManuallyInput, SendAutomaticInput, VerifyRequest, StatusRequest, StatusResponse, MessageError as OTPError }
+export { MessageMethod as OTPMethod, MessageStatus as OTPStatus } from './types'
 
 const MESSAGE_WAY_HOST = 'https://api.msgway.com'
 
@@ -11,7 +11,7 @@ const MESSAGE_WAY_HOST = 'https://api.msgway.com'
  * @param error The error object to check
  * @returns `error` is a standard MessageWay error
  */
-export function isMessageWayError(error: any): error is OTPError {
+export function isMessageWayError(error: any): error is MessageError {
   return !!(error && error.code && error.message && error.constructor === Object)
 }
 
