@@ -13,7 +13,7 @@ npm i messageway
 
 ## Send Message Via **WhatsApp Messenger**
 ```js
-const { MessageWay } = require('@messageway/messageway')
+const { MessageWay } = require('messageway')
 const message = new MessageWay(API_KEY)
 
 message.sendWhatsAppMessage({
@@ -32,7 +32,7 @@ message.sendWhatsAppMessage({
 
 ## Send Message Via **SMS**
 ```js
-const { MessageWay } = require('@messageway/messageway')
+const { MessageWay } = require('messageway')
 const message = new MessageWay(API_KEY)
 
 message.sendSMS({
@@ -51,7 +51,7 @@ message.sendSMS({
 
 ## Verify OTP Code
 ```js
-const { MessageWay, isMessageWayError } = require('@messageway/messageway')
+const { MessageWay, isMessageWayError } = require('messageway')
 const otp = new MessageWay(API_KEY)
 
 otp.verify({
