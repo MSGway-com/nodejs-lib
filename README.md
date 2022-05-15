@@ -8,7 +8,7 @@ A NodeJS SDK for the MessageWay API.
 
 ## Install
 ```bash
-npm i @messageway/messageway
+npm i messageway
 ```
 
 ## Send Message Via **WhatsApp Messenger**

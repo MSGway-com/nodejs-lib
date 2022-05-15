@@ -1,6 +1,6 @@
 {
-  "name": "@messageway/messageway",
-  "version": "1.0.0",
+  "name": "messageway",
+  "version": "1.1.0",
   "description": "MessageWay nodeJS library",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,10 @@
   "keywords": [
     "otp",
     "sms",
-    "ivr"
+    "ivr",
+    "message",
+    "whatsapp",
+    "gap"
   ],
   "contributors": [
     "Mojtaba Ghasemzadeh Tehrany",
@@ -31,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/MessageWay/MessageWayNodeJS/issues"
   },
-  "homepage": "https://globalsmartotp.github.io/MessageWayNodeJS",
+  "homepage": "https://messageway.github.io/MessageWayNodeJS/",
   "devDependencies": {
     "@types/got": "^9.6.12",
     "@types/jest": "^26.0.24",
