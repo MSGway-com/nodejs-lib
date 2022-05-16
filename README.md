@@ -74,7 +74,7 @@ otp.verify({
 
 ## Use async functions
 ```js
-async function send() {
+async function getStatus() {
   try {
     const result = await otp.getStatus({ OTPReferenceID: '1628960593121007556' })
     console.log('Method: ' + result.OTPMethod)
@@ -89,5 +89,5 @@ async function send() {
   }
 }
 
-send()
+getStatus()
 ```
