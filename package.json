@@ -1,6 +1,6 @@
 {
   "name": "messageway",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MessageWay nodeJS library",
   "main": "dist/index.js",
   "scripts": {
