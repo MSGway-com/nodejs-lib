@@ -76,7 +76,7 @@ otp.verify({
 ```js
 async function send() {
   try {
-    const result = await otp.getStatus({ OTPReferenceID: 1628960593121007556n })
+    const result = await otp.getStatus({ OTPReferenceID: '1628960593121007556' })
     console.log('Method: ' + result.OTPMethod)
     console.log('Status: ' + result.OTPStatus)
     console.log('Verified: ' + result.OTPVerified)
