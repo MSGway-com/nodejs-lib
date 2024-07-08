@@ -40,6 +40,7 @@ message.sendSMS({
   templateID: 12,
   params: ['Foo'],
   length: 4,
+  expireTime: 120,
 })
 .then(referenceID => {
   console.log(referenceID)
