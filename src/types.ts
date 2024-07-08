@@ -35,7 +35,7 @@ export interface SendInputCommon {
   mobile: string
   params?: string[]
   /**
-   * OTP expiration time (in seconds)
+   * OTP expiration duration (in seconds)
    */
   expireTime?: number
 }
