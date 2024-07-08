@@ -34,7 +34,10 @@ export interface SendInputCommon {
   countryCode?: number
   mobile: string
   params?: string[]
-  expireTime?: Date
+  /**
+   * OTP expiration time (in seconds)
+   */
+  expireTime?: number
 }
 
 export interface SendManuallyInput extends SendInputCommon {

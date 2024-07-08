@@ -79,7 +79,6 @@ export class MessageWay<IsManual extends boolean = false> {
     const body = {
       method,
       ...options,
-      expireTime: options.expireTime ? +options.expireTime : undefined,
     } as SendRequest
 
     return this.request<SendResponse>('/send', body)
